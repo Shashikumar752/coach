@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+         
+  <servlet>
+    <servlet-name>swimmingcoachservlet</servlet-name>
+    <servlet-class>com.shashi.servlet.coach.SwimmingCoachServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>swimmingcoachservlet</servlet-name>
+    <url-pattern>/swimming/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>cricketcoachservlet</servlet-name>
+    <servlet-class>com.shashi.servlet.coach.CricketCoachServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cricketcoachservlet</servlet-name>
+    <url-pattern>/cricket/</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>footballcoachservlet</servlet-name>
+    <servlet-class>com.shashi.servlet.coach.FootballCoachServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>footballcoachservlet</servlet-name>
+    <url-pattern>/football/</url-pattern>
+  </servlet-mapping>
+</web-app>
