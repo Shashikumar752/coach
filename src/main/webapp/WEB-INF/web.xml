@@ -7,30 +7,17 @@
          version="3.1">
          
   <servlet>
-    <servlet-name>swimmingcoachservlet</servlet-name>
-    <servlet-class>com.shashi.servlet.coach.SwimmingCoachServlet</servlet-class>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/ApplicationContext.xml</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>swimmingcoachservlet</servlet-name>
-    <url-pattern>/swimming/</url-pattern>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>cricketcoachservlet</servlet-name>
-    <servlet-class>com.shashi.servlet.coach.CricketCoachServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>cricketcoachservlet</servlet-name>
-    <url-pattern>/cricket/</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>footballcoachservlet</servlet-name>
-    <servlet-class>com.shashi.servlet.coach.FootballCoachServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>footballcoachservlet</servlet-name>
-    <url-pattern>/football/</url-pattern>
-  </servlet-mapping>
+  
 </web-app>
